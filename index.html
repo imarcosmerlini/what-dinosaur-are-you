@@ -1,23 +1,57 @@
 <!doctype html>
-<html>
+<html lang="pt-BR">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Sou dinossauro</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="description" content="Wich Dinosaur Are You" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Robson" />
+        <title>I am a Dinosaur</title>
         <link rel="stylesheet" href="style.css" />
+        <style>
+            body {
+                background-image: url("background.jpeg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        </style>
     </head>
     <body>
-        <label>Seu nome:</label>
-        <input id="name" type="text" />
-        <button id="submit" type="submit">Processar...</button>
-        <h1 style="visibility: hidden" id="dinosaur-name"></h1>
-        <img
-            style="visibility: hidden"
-            id="image"
-            src=""
-            width="600"
-            height="400"
-        />
-        <script src="script.js"></script>
+        <div class="container">
+            <div class="box radius">
+                <div class="">
+                    <div class="center">
+                        <label class="margin"><b>Human name:</b></label>
+                        <input autofocus class="margin" id="name" type="text" />
+                        <button
+                            class="margin botao-brasil"
+                            id="submit"
+                            type="submit"
+                        >
+                            Discover ...
+                        </button>
+                    </div>
+
+                    <div class="center">
+                        <h1
+                            class="center oitenta radius"
+                            style="visibility: hidden"
+                            id="dinosaur-name"
+                        ></h1>
+                    </div>
+
+                    <img
+                        style="visibility: hidden"
+                        id="image"
+                        src=""
+                        width="600"
+                        height="400"
+                    />
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
     </body>
 </html>

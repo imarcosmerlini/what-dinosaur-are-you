@@ -26,11 +26,9 @@ submitBt.addEventListener("click", async () => {
   dinosaurs = JSON.parse(dinosaurs);
   const youAreIndex = getRandomInt(dinosaurs.length);
 
-  // TODO: Concatenar o nome + o nome do dinossauro
   name = `${captalize(name.value)} ${captalize(dinosaurs[youAreIndex].name)}`;
   console.log(`Você é ${name}`);
 
-  // TODO: Mostrar a imagem do dinossauro
   const image = document.getElementById("image");
   image.src = dinosaurs[youAreIndex].image;
   const dinosaurName = document.getElementById("dinosaur-name");
@@ -43,7 +41,12 @@ submitBt.addEventListener("click", async () => {
 async function getDinossaurs() {
   const api = "https://dinoapi.brunosouzadev.com/api/dinosaurs";
   try {
-    let response = await fetch(api);
+    let response = await fetch(api, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     response = await response.json();
     localStorage.setItem("dinosaurs", JSON.stringify(response));
   } catch (e) {
@@ -56,8 +59,14 @@ function getRandomInt(max) {
 }
 
 function captalize(word) {
-  const firstLetter = word.charAt(0);
-  const firstLetterCap = firstLetter.toUpperCase();
-  const remainingLetters = word.slice(1);
-  return firstLetterCap + remainingLetters;
+  let fullName = "";
+
+  word.split(" ").forEach((name) => {
+    console.log(name);
+    const firstLetter = name.charAt(0);
+    const firstLetterCap = firstLetter.toUpperCase();
+    const remainingLetters = name.slice(1);
+    fullName += `${firstLetterCap}${remainingLetters} `;
+  });
+  return fullName;
 }

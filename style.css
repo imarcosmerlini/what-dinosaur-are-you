@@ -1,0 +1,91 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #009739 0%,
+        #ffcc29 33%,
+        #002776 66%,
+        #ffffff 100%
+    );
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+}
+
+.margin {
+    margin: 2px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.botao-brasil {
+    background: linear-gradient(90deg, #009739 0%, #ffcc29 50%, #002776 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.botao-brasil:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.oitenta {
+    background: linear-gradient(
+        135deg,
+        #ff00ff 0%,
+        #00ffff 25%,
+        #39ff14 50%,
+        #ffff00 75%,
+        #ff5f1f 100%
+    );
+}
+
+.radius {
+    border-radius: 5px;
+}
+
+h1 {
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-shadow:
+        2px 2px 0 #ff00ff,
+        4px 4px 0 #00ffff,
+        6px 6px 0 #39ff14;
+    margin: 12px;
+}
+
+button {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
